@@ -25,12 +25,53 @@ public class MainActivity extends AppCompatActivity
         setContentView(R.layout.activity_main);
 
         mTextField = findViewById(R.id.textView); //Esto pasa el texto al TextView
+
         verde = findViewById(R.id.Verde);
+        matcha = findViewById(R.id.Matcha);
+        blanco = findViewById(R.id.Blanco);
+        manzanilla = findViewById(R.id.Manzanilla);
+        menta = findViewById(R.id.Menta);
+        hibisco = findViewById(R.id.Hibisco);
 
         verde.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 IniciarContador(milisVerde);
+            }
+        });
+
+        matcha.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                IniciarContador(milisMatcha);
+            }
+        });
+
+        blanco.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                IniciarContador(milisBlanco);
+            }
+        });
+
+        manzanilla.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                IniciarContador(milisManzanilla);
+            }
+        });
+
+        menta.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                IniciarContador(milisMenta);
+            }
+        });
+
+        hibisco.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                IniciarContador(milisHibisco);
             }
         });
     }
