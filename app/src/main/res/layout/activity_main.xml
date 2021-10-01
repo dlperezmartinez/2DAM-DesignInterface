@@ -10,8 +10,9 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
-        android:text="Hello World!"
+        android:layout_marginTop="300dp"
+        android:text="00:00"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -21,27 +22,25 @@
         android:id="@+id/Matcha"
         android:layout_width="107dp"
         android:layout_height="107dp"
-        android:layout_marginTop="112dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="150dp"
+        android:layout_marginEnd="8dp"
         app:layout_constraintBottom_toTopOf="@+id/Menta"
         app:layout_constraintEnd_toStartOf="@+id/Blanco"
         app:layout_constraintStart_toEndOf="@+id/Verde"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_launcher_foreground"
+        app:srcCompat="@drawable/matcha"
         tools:srcCompat="@drawable/matcha" />
 
     <ImageView
         android:id="@+id/Blanco"
         android:layout_width="108dp"
         android:layout_height="107dp"
-        android:layout_marginTop="112dp"
+        android:layout_marginTop="150dp"
         android:layout_marginEnd="32dp"
-        android:layout_marginBottom="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/Hibisco"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/Matcha"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_launcher_background"
+        app:srcCompat="@drawable/blanco"
         tools:srcCompat="@drawable/blanco" />
 
     <ImageView
@@ -49,13 +48,10 @@
         android:layout_width="109dp"
         android:layout_height="107dp"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="112dp"
-        android:layout_marginBottom="10dp"
-        app:layout_constraintBottom_toTopOf="@+id/Manzanilla"
-        app:layout_constraintEnd_toStartOf="@+id/Matcha"
+        android:layout_marginTop="150dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_launcher_foreground"
+        app:srcCompat="@drawable/verde"
         tools:srcCompat="@drawable/verde" />
 
     <ImageView
@@ -63,34 +59,34 @@
         android:layout_width="109dp"
         android:layout_height="109dp"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="8dp"
-        app:layout_constraintEnd_toStartOf="@+id/Menta"
+        android:layout_marginTop="32dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Matcha"
-        app:srcCompat="@drawable/ic_launcher_background"
+        app:layout_constraintTop_toBottomOf="@+id/Verde"
+        app:srcCompat="@drawable/manzanilla"
         tools:srcCompat="@drawable/manzanilla" />
 
     <ImageView
         android:id="@+id/Menta"
         android:layout_width="107dp"
         android:layout_height="109dp"
-        android:layout_marginBottom="28dp"
-        app:layout_constraintBottom_toTopOf="@+id/textView"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="8dp"
         app:layout_constraintEnd_toStartOf="@+id/Hibisco"
         app:layout_constraintStart_toEndOf="@+id/Manzanilla"
         app:layout_constraintTop_toBottomOf="@+id/Matcha"
-        app:srcCompat="@drawable/ic_launcher_background"
+        app:srcCompat="@drawable/menta"
         tools:srcCompat="@drawable/menta" />
 
     <ImageView
         android:id="@+id/Hibisco"
         android:layout_width="108dp"
         android:layout_height="109dp"
+        android:layout_marginTop="32dp"
         android:layout_marginEnd="32dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/Menta"
         app:layout_constraintTop_toBottomOf="@+id/Blanco"
-        app:srcCompat="@drawable/ic_launcher_background"
+        app:srcCompat="@drawable/hibisco"
         tools:srcCompat="@drawable/hibisco" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

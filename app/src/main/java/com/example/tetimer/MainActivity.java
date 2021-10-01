@@ -14,8 +14,8 @@ public class MainActivity extends AppCompatActivity
     TextView mTextField;
     long milisVerde = 420000; //Tiempo que se va a añadir en el timer.
     long milisMatcha = 20000; //Tiempo que se va a añadir en el timer.
-    long milisBlanco = 20000; //Tiempo que se va a añadir en el timer.
-    long milisManzanilla = 20000; //Tiempo que se va a añadir en el timer.
+    long milisBlanco = 60000; //Tiempo que se va a añadir en el timer.
+    long milisManzanilla = 90000; //Tiempo que se va a añadir en el timer.
     long milisMenta = 20000; //Tiempo que se va a añadir en el timer.
     long milisHibisco = 20000; //Tiempo que se va a añadir en el timer.
 
@@ -82,7 +82,7 @@ public class MainActivity extends AppCompatActivity
         new CountDownTimer(milis, 1000) {
 
             public void onTick(long millisUntilFinished) {
-                mTextField.setText("seconds remaining: " + millisUntilFinished / 1000);
+                mTextField.setText("" + (millisUntilFinished / 1000)/60 + ":" + (millisUntilFinished / 1000)%60);
             }
 
             public void onFinish() {
