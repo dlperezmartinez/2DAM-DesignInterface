@@ -29,6 +29,7 @@ public class MainActivity extends AppCompatActivity
 
         mTextField = findViewById(R.id.textView); //Esto pasa el texto al TextView
         barraProgreso = findViewById(R.id.progressBar);
+        barraProgreso.setVisibility(View.GONE);
 
         verde = findViewById(R.id.Verde);
         matcha = findViewById(R.id.Matcha);
@@ -42,6 +43,7 @@ public class MainActivity extends AppCompatActivity
             public void onClick(View view) {
                 barraProgreso.setMax((int) (milisVerde) / 1000); //Setea el maximo de la barra de progreso
                 IniciarContador(milisVerde);
+                barraProgreso.setVisibility(View.VISIBLE);
             }
         });
 
@@ -50,6 +52,7 @@ public class MainActivity extends AppCompatActivity
             public void onClick(View view) {
                 barraProgreso.setMax((int) (milisMatcha) / 1000); //Setea el maximo de la barra de progreso
                 IniciarContador(milisMatcha);
+                barraProgreso.setVisibility(View.VISIBLE);
             }
         });
 
@@ -58,6 +61,7 @@ public class MainActivity extends AppCompatActivity
             public void onClick(View view) {
                 barraProgreso.setMax((int) (milisBlanco) / 1000); //Setea el maximo de la barra de progreso
                 IniciarContador(milisBlanco);
+                barraProgreso.setVisibility(View.VISIBLE);
             }
         });
 
@@ -66,6 +70,7 @@ public class MainActivity extends AppCompatActivity
             public void onClick(View view) {
                 barraProgreso.setMax((int) (milisManzanilla) / 1000); //Setea el maximo de la barra de progreso
                 IniciarContador(milisManzanilla);
+                barraProgreso.setVisibility(View.VISIBLE);
             }
         });
 
@@ -74,6 +79,7 @@ public class MainActivity extends AppCompatActivity
             public void onClick(View view) {
                 barraProgreso.setMax((int) (milisMenta) / 1000); //Setea el maximo de la barra de progreso
                 IniciarContador(milisMenta);
+                barraProgreso.setVisibility(View.VISIBLE);
             }
         });
 
@@ -82,6 +88,7 @@ public class MainActivity extends AppCompatActivity
             public void onClick(View view) {
                 barraProgreso.setMax((int) (milisHibisco) / 1000); //Setea el maximo de la barra de progreso
                 IniciarContador(milisHibisco);
+                barraProgreso.setVisibility(View.VISIBLE);
             }
         });
 
