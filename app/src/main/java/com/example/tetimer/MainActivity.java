@@ -6,18 +6,21 @@ import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity
 {
     ImageView verde, matcha, menta, blanco, manzanilla, hibisco; //Imagenes
     TextView mTextField;
+    ProgressBar barraProgreso;
+
     long milisVerde = 420000; //Tiempo que se va a añadir en el timer.
     long milisMatcha = 20000; //Tiempo que se va a añadir en el timer.
     long milisBlanco = 60000; //Tiempo que se va a añadir en el timer.
     long milisManzanilla = 90000; //Tiempo que se va a añadir en el timer.
     long milisMenta = 20000; //Tiempo que se va a añadir en el timer.
-    long milisHibisco = 20000; //Tiempo que se va a añadir en el timer.
+    long milisHibisco = 5000; //Tiempo que se va a añadir en el timer.
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +28,7 @@ public class MainActivity extends AppCompatActivity
         setContentView(R.layout.activity_main);
 
         mTextField = findViewById(R.id.textView); //Esto pasa el texto al TextView
+        barraProgreso = findViewById(R.id.progressBar);
 
         verde = findViewById(R.id.Verde);
         matcha = findViewById(R.id.Matcha);
@@ -36,6 +40,7 @@ public class MainActivity extends AppCompatActivity
         verde.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                barraProgreso.setMax((int) (milisVerde) / 1000); //Setea el maximo de la barra de progreso
                 IniciarContador(milisVerde);
             }
         });
@@ -43,6 +48,7 @@ public class MainActivity extends AppCompatActivity
         matcha.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                barraProgreso.setMax((int) (milisMatcha) / 1000); //Setea el maximo de la barra de progreso
                 IniciarContador(milisMatcha);
             }
         });
@@ -50,6 +56,7 @@ public class MainActivity extends AppCompatActivity
         blanco.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                barraProgreso.setMax((int) (milisBlanco) / 1000); //Setea el maximo de la barra de progreso
                 IniciarContador(milisBlanco);
             }
         });
@@ -57,6 +64,7 @@ public class MainActivity extends AppCompatActivity
         manzanilla.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                barraProgreso.setMax((int) (milisManzanilla) / 1000); //Setea el maximo de la barra de progreso
                 IniciarContador(milisManzanilla);
             }
         });
@@ -64,6 +72,7 @@ public class MainActivity extends AppCompatActivity
         menta.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                barraProgreso.setMax((int) (milisMenta) / 1000); //Setea el maximo de la barra de progreso
                 IniciarContador(milisMenta);
             }
         });
@@ -71,9 +80,12 @@ public class MainActivity extends AppCompatActivity
         hibisco.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                barraProgreso.setMax((int) (milisHibisco) / 1000); //Setea el maximo de la barra de progreso
                 IniciarContador(milisHibisco);
             }
         });
+
+
     }
 
     void IniciarContador(long milis)
@@ -83,6 +95,7 @@ public class MainActivity extends AppCompatActivity
 
             public void onTick(long millisUntilFinished) {
                 mTextField.setText("" + (millisUntilFinished / 1000)/60 + ":" + (millisUntilFinished / 1000)%60);
+                barraProgreso.setProgress((int) (millisUntilFinished / 1000));
             }
 
             public void onFinish() {
